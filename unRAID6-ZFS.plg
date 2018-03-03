@@ -393,10 +393,10 @@ if [ "$supported_kernel" = true ] ; then
   download_install "${spl_pkg}"
   download_install "${zfs_pkg}"
 
-  echo "Loading ZFS modules and importing pools (this could take some time....)"
+  echo "Loading ZFS modules (this could take some time....)"
   depmod >> /dev/null
   modprobe zfs  >> /dev/null
-  zpool import -a >> /dev/null
+  #zpool import -a >> /dev/null
   #fix for the icon
   chmod 755 /usr/local/emhttp/plugins/unRAID6-ZFS/
 fi
